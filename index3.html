@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Container</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+        <nav class="navbar">
+                <div class="navbar-container">
+                    <div class="navbar-logo">
+                        <img src="profile.png">
+                    </div>
+                    <div class="navbar-menu-icon" id="menu-icon" onclick="toggleMenu()">
+                        &#9776;
+                    </div>
+                    <ul class="navbar-menu" id="navbar-menu">
+                        <li class="navbar-item close-icon" id="close-icon" onclick="toggleMenu()">
+                            &times;
+                        </li>
+                        <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+                        <li class="navbar-item"><a href="#products" class="navbar-link">Products</a></li>
+                        <li class="navbar-item"><a href="#about" class="navbar-link">About Us</a></li>
+                        <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
+                        <li class="navbar-item"><a href="#" class="navbar-link" onclick="showCart()">Cart <span id="cart-count">0</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+    <div id="home" class="home-section container">
+            <div class="company-profile">
+                <img src="profile.png" alt="Company Profile" class="company-profile-picture">
+                <div class="company-description">
+                    <h1>Welcome to Our Company</h1>
+                    <p>Our company is dedicated to providing the best products to our customers. With a focus on innovation, quality, and customer satisfaction, we strive to exceed expectations and deliver excellence in everything we do.</p>
+                </div>
+            </div>
+            <div class="company-videos">
+                <h2>Our Products in Action</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="product-video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="product-video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                            <source src="product-video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <video controls>
+                                <source src="product-video2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+
+                            <video controls>
+                                    <source src="product-video2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
+                                <video controls>
+                                        <source src="product-video2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                    <!-- Add more videos as needed -->
+                </div>
+            </div>
+        </div>
+
+   <section class="products">
+        <h2>These Are Our products</h2>
+    <div class="products-container">
+        <div class="product-card">
+            <img src="IMG-20240630-WA0024.jpg" alt="Product 1" class="product-image">
+            <h2 class="product-title">Product 1</h2>
+            <p class="product-description">Description of product 1.</p>
+            <p class="product-price" data-price="19.99">$19.99</p>
+            <div class="product-quantity">
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" name="quantity1" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 1', 'quantity1', 19.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20240701-WA0011.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20240701-WA0010.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240701-WA0008.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240701-WA0007.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240701-WA0006.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20240701-WA0005.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240701-WA0004.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240701-WA0003.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240701-WA0002.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20240701-WA0001.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240630-WA0028.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="IMG-20240630-WA0027.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240630-WA0026.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240630-WA0025.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240630-WA0024.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20240630-WA0023.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240630-WA0022.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="IMG-20240630-WA0021.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG-20240630-WA0017.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">Description of product 2.</p>
+            <p class="product-price" data-price="29.99">$29.99</p>
+            <div class="product-quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+            </div>
+            <button class="product-button" onclick="addToCart('Product 2', 'quantity2', 29.99)">Add to Cart</button>
+        </div>  
+
+        
+    </div>
+</section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p id="cart-total"></p>
+            <form id="checkout-form">
+                <h3>Checkout</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea><br><br>
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment">
+                    <option value="credit">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="Mpesa">Mpesa</option>
+                </select><br><br>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+
+    <section id="leasing-products" class="leasing-products-section container">
+            <h2>Leasing Products</h2>
+            <div class="leasing-products-container">
+                <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 1', 10)">
+                    <img src="Untitled6_page1_image6.png" alt="Leasing Product 1" class="leasing-product-image">
+                    <h3 class="leasing-product-title">Leasing Product 1</h3>
+                </div>
+                <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                    <img src="Untitled6_page1_image9.png" alt="Leasing Product 2" class="leasing-product-image">
+                    <h3 class="leasing-product-title">Leasing Product 2</h3>
+                </div>
+
+                <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                        <img src="Untitled6_page1_image8.png" alt="Leasing Product 2" class="leasing-product-image">
+                        <h3 class="leasing-product-title">Leasing Product 2</h3>
+                    </div>
+
+                    <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                            <img src="Untitled6_page1_image7.png" alt="Leasing Product 2" class="leasing-product-image">
+                            <h3 class="leasing-product-title">Leasing Product 2</h3>
+                        </div>
+
+                        <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                                <img src="Untitled6_page1_image6.png" alt="Leasing Product 2" class="leasing-product-image">
+                                <h3 class="leasing-product-title">Leasing Product 2</h3>
+                            </div>
+                            <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                                    <img src="Untitled6_page1_image4.jpg" alt="Leasing Product 2" class="leasing-product-image">
+                                    <h3 class="leasing-product-title">Leasing Product 2</h3>
+                                </div>
+                                
+                                <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                                        <img src="Untitled6_page1_image5.png" alt="Leasing Product 2" class="leasing-product-image">
+                                        <h3 class="leasing-product-title">Leasing Product 2</h3>
+                                    </div>
+
+                                    <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                                            <img src="Untitled6_page1_image3.jpg" alt="Leasing Product 2" class="leasing-product-image">
+                                            <h3 class="leasing-product-title">Leasing Product 2</h3>
+                                        </div>
+
+                                        <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 20)">
+                                                <img src="Untitled6_page1_image2.jpg" alt="Leasing Product 2" class="leasing-product-image">
+                                                <h3 class="leasing-product-title">Leasing Product 2</h3>
+                                            </div>
+
+                                            <div class="leasing-product-card" onclick="showLeasingDetails('Leasing Product 2', 4)">
+                                                    <img src="Untitled6_page1_image1.jpg" alt="Leasing Product 2" class="leasing-product-image">
+                                                    <h3 class="leasing-product-title">Leasing Product 2</h3>
+                                                </div>
+            </div>
+    
+            <div id="leasing-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeLeasingModal()">&times;</span>
+                    <h2 id="leasing-product-title"></h2>
+                    <p id="leasing-price-per-day"></p>
+                    <form id="leasing-form">
+                        <label for="leasing-place">Your place</label>
+                        <input type="text" id="leasing-place" name="leasing-place" required><br><br>
+                        <label for="leasing-name">Name:</label>
+                        <input type="text" id="leasing-name" name="leasing-name" required><br><br>
+                        <label for="leasing-email">Email:</label>
+                        <input type="email" id="leasing-email" name="leasing-email" required><br><br>
+                        <label for="leasing-days">Number of Days:</label>
+                        <input type="number" id="leasing-days" name="leasing-days" min="1" required><br><br>
+                        <label for="leasing-payment">Payment Method:</label>
+                        <select id="leasing-payment" name="leasing-payment">
+                            <option value="credit">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="mpesa">Mpesa</option>
+                        </select><br><br>
+                        <button type="submit">Submit Lease Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    
+
+
+        <form class="contact-form" id="contact-form">
+            <h3>Send Us a Message</h3>
+            <label for="contact-name">Name:</label>
+            <input type="text" id="contact-name" name="contact-name" required><br><br>
+            <label for="contact-Phone">Phone Number:</label>
+            <input type="phone-Number" id="contact-phone" name="Phone-number" required><br><br>
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="contact-message" rows="4" required></textarea><br><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+    
+
+
+    <section id="create-account" class="create-account-section">
+        <h2>Create Account</h2>
+        <p>Register to get the best experience:</p>
+        <form class="create-account-form" id="create-account-form">
+            <label for="account-name">Name:</label>
+            <input type="text" id="account-name" name="account-name" required><br><br>
+            <label for="account-email">Email:</label>
+            <input type="email" id="account-email" name="account-email" required><br><br>
+            <label for="account-password">Password:</label>
+            <input type="password" id="account-password" name="account-password" required><br><br>
+            <button type="submit">Create Account</button>
+        </form>
+    </section>
+
+
+    <div class="flag">
+        <div class="image">
+            <img src="kenya.jpg">
+            <h1>KENYA</h1>
+        </div>
+        <div class="image">
+                <img src="uganda.jpg">
+                <h1>UGANDA</h1>
+            </div>
+            <div class="image">
+                    <img src="tanzania.jpg">
+                    <h1>TANZANIA</h1>
+                </div>
+                
+    </div>
+    <div class="description">
+        <h1>A member of Sir.Phillip group</h1>
+    </div>
+
+
+
+
+    <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>Learn more about our company and our mission:</p>
+            <div class="about-details">
+                <p>At Home Grain Industry  (KE) Ltd, we are more than just a company- we are committed toquality , innovation and agricultural excellence. We have  consistently been a trusted source of a wide range of agricultural products, serving both our local and international clients based in Kenya and Tanzania with dedication and integrity.</p>
+                <p>Our core focus is on agricultural produce, and we take immense pride in delivering premium quality products to our customers.  Whether you need the finest Maize Flour, Wheat Flour, Vegetable Oil, Chicken Feeds, Rice, Sugar, or other agricultural commodities, we are your dependable partner. We understand the significance of quality in the food supply chain, and we go above and beyond to ensure that our products meet the highest industry standards.</p>
+                <p>Home Grain Industry (KE) Ltd is committed to advancing agricultural practices that are both environmentally sustainable and technologically innovative. We invest  in modern farming techniques, machinery, and research to ensure the production of high-quality, safe, and nutritious agricultural products</p>
+                
+            </div>
+    
+            <h2>Our Mission</h2>
+            <p>Learn more about our company and our mission:</p>
+            <div class="about-details">
+                <p>Provide  Quality  and  Diverse  Agricultural Products:  We  are  dedicated  to  supplying  the finest  agricultural  products,  including  Maize Flour, Wheat Flour, Vegetable Oil, Chicken Feeds, Rice,  Sugar,  and  more,  meeting  the  needs  of  our diverse customer base..</p>
+                <p>We believe in sustainable practices and strive to make a positive impact on the environment
+                     and the community. Thank you for choosing us and supporting our mission.</p>
+            </div>
+            <h2>Our Vission</h2>
+            <p>Learn more about our company and our mission:</p>
+            <div class="about-details">
+                <p> Sustainably  and  innovation:  We  are committed  to  advancing  sustainable  farming practices  and  technological  innovation,  ensuring responsible  sourcing  and  processing  to  minimize our environmental impact.</p>
+                <p>Enhance  Global  Food  Security:  We  work tirelessly  to  contribute  to  global  food  security  by producing  safe,  nutritious  and  accessible  food products for communities worldwide.</p>
+                <p>Empower  Farmers  and  Foster  Economic  Growth: Our  mission  includes  empowering  farmers through  knowledge  sharing,  access  to  resources and  fair  partnerships,  contributing  to  the  growth of the agricultural sector and local economies.</p>
+            </div>
+    
+    
+            
+        </section>
+
+
+        <section id="contact" class="contact-section">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out to us:</p>
+                <div class="contact-details">
+                    <p><strong>Phone:</strong>
+                          <li> 0733-904-904</li>
+                          <li>0722-242-856/0733-242-856 </li>
+                          <li> 0722-242-753/0733-242-753</li>
+        
+                    </p>
+                    <p><strong>Email:</strong> Homegrain.industries@gmail.com </p>
+                    <p><strong>Address:</strong>P.O BOX:254722242856-00100 GPO NAIROBI </p>
+                    <p><strong>Location:</strong>
+                    <li>NAIROBI BRANCH (INDUSTRIAL AREA) </li>
+                    <li>MOMBASA BRANCH (SHIMANZI)</li>
+                    <li>NAKURU BRANCH (INDUSTRIAL AREA)</li>
+                    <li> ELDORET BRANCH (CBD)</li>
+                    <li> KISUMU BRANCH (INDUSTRIAL AREA)</li>
+                   </p>
+                   <p><strong>Website</strong>: www.homegrainindustries.com</p>
+        
+                </div>
+
+
+
+
+
+    <script src="javascript2.js"></script>
+</body>
+</html>

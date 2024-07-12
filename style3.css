@@ -1,0 +1,540 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #bcbbc0
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 8px;
+    color: #fff;
+    position: fixed;
+    width: 100vw;
+    height: 6rem;
+    top: 0;
+    z-index: 10;
+
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.navbar-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%
+}
+
+.navbar-logo img{
+  padding-left: 30px
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 80px;
+}
+
+.navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+/* Products Container Styles */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.product-card {
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-quantity {
+    margin: 10px 0;
+}
+
+.product-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-button:hover {
+    background-color: #218838;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cart-item {
+    margin: 10px 0;
+}
+
+#cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form h3 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section Styles */
+.contact-section,
+.about-section,
+.create-account-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: rgb(69, 142, 238);
+}
+
+.contact-details p,
+.about-details p {
+    margin: 10px 0;
+}
+
+.flag{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    gap: 2rem;
+    
+}
+
+@media screen and (max-width: 1024px){
+   
+
+    .flag{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+img{
+    height: 100px;
+}
+
+.description{
+    text-align: center
+}
+
+
+/* Home Section Styles */
+.home-section {
+    margin: 98px 0;
+    padding-top: 20px;
+    background-color: lavender;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.company-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.company-profile-picture {
+    max-width: 100%;
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.company-description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.company-description h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.company-description p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.company-videos {
+    margin-top: 40px;
+}
+
+.company-videos h2 {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(3,5fr);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+video {
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0;}
+
+
+    .leasing-products-section {
+        margin: 40px 60px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .leasing-products-container {
+        display: grid;
+        grid-template-columns: repeat(5,4fr);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+    
+    .leasing-product-card {
+        width: 55%;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .leasing-product-card:hover {
+        transform: scale(1.05);
+    }
+    
+    .leasing-product-image {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .leasing-product-title {
+        font-size: 24px;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+     h2{
+        text-align: center;
+    }
+
+    .contact-details  li{
+        text-align: center;
+        list-style: none;
+        font-weight: bolder
+    }
+
+    .contact-details p{
+        text-align: center;
+        font-weight: bolder
+    }
+    .contact-section p{
+        text-align: center;
+        font-weight: bolder
+    }
+
+    /* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    .company-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .company-profile-picture {
+        margin: 0 0 20px 0;
+    }
+
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .leasing-products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leasing-product-card {
+        width: 100%;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
+.navbar-menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        max-width: 300px;
+        border-top: 1px solid #575757;
+        padding-left: 30px;
+        padding-right: 50px
+      
+    }
+
+    .navbar-item {
+        margin: 0;
+      
+    }
+
+    .navbar-menu-icon {
+        display: block;
+        margin-left: 10px;
+        position: fixed;
+       
+    }
+
+    #close-icon {
+        display: block;
+        padding-right: 20px;
+        border-bottom: 1px solid #575757;
+      
+       
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
+
+
+.nav_menu{
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  
+}
+.nav_menu li{
+    width: 100%;
+    height: 5.8rem;
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top right;
+    opacity: 0;
+
+}
